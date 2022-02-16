@@ -5,13 +5,17 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.Console;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 public class ConsoleApp {
 
     private final Console console;
     private final BooksService booksService;
 
+    private final Logger LOG = Logger.getLogger(ConsoleApp.class.getName());
+
     public ConsoleApp(Console console, BooksService booksService) {
+        LOG.info("Starting app");
         this.console = console;
         this.booksService = booksService;
     }
